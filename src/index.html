@@ -238,24 +238,62 @@
 
       <!-- CONTADOR -->
 
-      <section id="contador" class="fade-up w-screen py-2 px-6 flex flex-col items-center" style="background-color: #F8F5F2;">
-        <p style="font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: #a89070; margin-bottom: 0.5rem;">
-          Contamos con tu presencia el día
-        </p>
-        <p id="countdown" style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: #636C2E;">
-          00d 00h 00m 00s
-        </p>
+      <section class="relative w-screen flex justify-center items-center py-16 overflow-hidden">
+
+        <!-- 🌿 ARREGLOS ENCIMA (overlay superior global) -->
+        <div class="absolute top-0 left-0 w-full z-20 pointer-events-none">
+          <img src="assets/images/arreglo7.png" class="w-full h-auto" alt="arreglo superior">
+        </div>
+
+        <!-- 🌿 ARREGLOS ABAJO -->
+        <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
+          <img src="assets/images/arreglo7.png" class="w-full h-auto" alt="arreglo inferior">
+        </div>
+
+        <!-- 💍 TARJETA CONTADOR -->
+        <div class="relative z-30  backdrop-blur-md rounded-3xl shadow-xl px-8 py-10 text-center w-[90%] md:w-150">
+
+          <h2 class="text-xl md:text-2xl font-semibold mb-6">
+            Faltan:
+          </h2>
+
+          <div class="flex justify-center gap-4 md:gap-8 text-center">
+
+            <div>
+              <div id="days" class="text-3xl md:text-5xl font-bold">00</div>
+              <span class="text-sm">Días</span>
+            </div>
+
+            <div>
+              <div id="hours" class="text-3xl md:text-5xl font-bold">00</div>
+              <span class="text-sm">Horas</span>
+            </div>
+
+            <div>
+              <div id="minutes" class="text-3xl md:text-5xl font-bold">00</div>
+              <span class="text-sm">Min</span>
+            </div>
+
+            <div>
+              <div id="seconds" class="text-3xl md:text-5xl font-bold">00</div>
+              <span class="text-sm">Seg</span>
+            </div>
+
+          </div>
+
+        </div>
+
       </section>
 
       <!-- FOOTER -->
-    <!-- <footer class="py-6 text-center">
+    <footer class="py-6 text-center">
       <p
         class="flex flex-wrap items-center justify-center gap-1 text-sm text-stone-600"
       >
         <span>Diseñado con</span>
 
         <svg
-          class="h-4 w-4 fill-rose-500"
+          class="h-4 w-4 fill-green-500"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -270,12 +308,12 @@
           href="https://wa.me/51931293336?text=¡Hola! deseo más información sobre la creación de invitaciones digitales"
           target="_blank"
           rel="noopener noreferrer"
-          class="font-medium text-amber-700 transition hover:text-amber-800 hover:underline"
+          class="font-medium text-green-700 transition hover:text-amber-800 hover:underline"
         >
           Iterabyd
         </a>
       </p>
-    </footer> -->
+    </footer>
     </main>
 
     
