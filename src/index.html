@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>María & José | Nuestra Boda</title>
+
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Pinyon+Script&family=Playfair+Display:ital@1&family=Cormorant+Garamond:wght@300;400&display=swap" rel="stylesheet" />
+  </head>
+
+<body class="m-0 p-0 bg-[#F8F5F2] overflow-x-hidden">
+    <!-- PANTALLA DE INICIO -->
+    <section
+  id="welcome-screen"
+  class="fixed inset-0 z-50 bg-[#F8F5F2]"
+>
+  <div
+    onclick="showInvitation()"
+    class="w-full h-full flex flex-col items-center justify-center"
+  >
+    <img
+      src="assets/images/trajeta_olivo.png"
+      alt="Invitación de Boda"
+      class="object-contain"
+      style="width: 650px"
+    />
+
+    <p
+      class="mt-4 text-center text-stone-700"
+      style="font-family:'Cormorant Garamond', serif;"
+    >
+      Haz clic para ver la invitación
+    </p>
+  </div>
+</section>
+    <!-- REPRODUCTOR DE MÚSICA -->
+    <section id="music-player">
+      <button id="music-btn" style="display:none; position:fixed; bottom:25px; right:25px; width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); z-index:99999; cursor:pointer; align-items:center; justify-content:center;">
+        <svg id="play-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:22px;height:22px;fill:white;">
+          <path d="M8 5v14l11-7z"/>
+        </svg>
+        <svg id="pause-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width:22px;height:22px;fill:white;display:none;">
+          <path d="M6 19h4V5H6zm8-14v14h4V5h-4z"/>
+        </svg>
+      </button>
+      <audio id="music" loop>
+        <source src="assets/audio/musicafond.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <!-- CONTENIDO DE LA INVITACIÓN -->
+    <main id="invitation-content" class="hidden">
+      <!-- FOTO -->
+      <section id="foto" class="relative w-screen overflow-hidden" style="height: 100dvh;">
+        <picture class="absolute inset-0 w-full h-full">
+          <!-- Laptop (1024px en adelante) -->
+          <source media="(min-width: 1024px)" srcset="assets/images/img1_laptop.png">
+          
+          <!-- Tablet (768px - 1023px) -->
+          <source media="(min-width: 768px)" srcset="assets/images/img1_tablet.png">
+          
+          <!-- Móvil (por defecto) -->
+          <img
+            src="assets/images/img1_movil2.png"
+            alt="Foto de la boda"
+            class="w-full h-full object-cover"
+            />
+        </picture>
+        <!-- Nombres superpuestos -->
+        <div style="position: absolute; top: 4rem; left: 0; width: 100%; z-index: 10; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
+          <p style="font-family: 'Pinyon Script', cursive; font-size: 5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
+            Rosi
+          </p>
+          <p style="font-family: 'Pinyon Script', cursive; font-size: 2.5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
+            &amp;
+          </p>
+          <p style="font-family: 'Pinyon Script', cursive; font-size: 5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
+            Saul
+          </p>
+        </div>
+      </section>
+
+
+      <!-- NOMBRES PADRES -->
+
+      <section id="padres" class="fade-up w-screen py-2 px-6 flex flex-col items-center" style="background-color: #F8F5F2;">
+
+        <!-- Línea decorativa arriba -->
+        <div class="fade-up" style="display: flex; align-items: center; gap: 1rem; width: 100%; max-width: 500px; margin-bottom: 2rem;">
+          <div style="flex: 1; height: 1px; background: linear-gradient(to right, transparent, #636C2E);"></div>
+          <p style="font-family: 'Great Vibes', cursive; font-size: 2rem; color: #636C2E;">❧</p>
+          <div style="flex: 1; height: 1px; background: linear-gradient(to left, transparent, #636C2E);"></div>
+        </div>
+
+        <!-- Título -->
+        <p class="fade-up" style="font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: #a89070; margin-bottom: 0.5rem;">
+          En compañía de nuestros padres
+        </p>
+
+        <!-- Padres -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-[800px]">
+
+          <!-- Padres de la novia -->
+          <div class="fade-up flex flex-col items-center text-center">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; letter-spacing: 0.3em; color: #a89070; text-transform: uppercase; margin-bottom: 0.75rem;">
+              Padres de la novia
+            </p>
+            <p style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #636C2E;">
+              Juan Palomino Lopez
+            </p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #9e8e7e; margin: 0.2rem 0;">
+              &
+            </p>
+            <p style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #636C2E;">
+              Erlinda Bendezú Gomez
+            </p>
+          </div>
+
+          <!-- Separador central -->
+          <div  class="fade-up" style="display: flex; flex-direction: column; align-items: center; gap: 0.4rem;">
+            <div style="width: 1px; height: 40px; background: #d4c4b0;"></div>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: #a89070;">✦</p>
+            <div style="width: 1px; height: 40px; background: #d4c4b0;"></div>
+          </div>
+
+          <!-- Padres del novio -->
+          <div class="fade-up flex flex-col items-center text-center">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; letter-spacing: 0.3em; color: #a89070; text-transform: uppercase; margin-bottom: 0.75rem;">
+              Padres del novio
+            </p>
+            <p style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #636C2E;">
+              Antonio Guillen Sosa
+            </p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #9e8e7e; margin: 0.2rem 0;">
+              &
+            </p>
+            <p style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #636C2E;">
+              Francisca Gutierrez Cabrera
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Arreglo decorativo -->
+        <div class="fade-up my-14 flex justify-center">
+          <img
+            src="assets/images/arreglo1.png"
+            alt="Arreglo floral"
+            class="w-[480px] md:w-[340px] lg:w-[150px] h-auto"
+          />
+        </div>
+
+
+        <!-- PADRINOS-->
+
+         <!-- Padres del novio -->
+          <div class="fade-up flex flex-col items-center text-center">
+
+            <!-- Título -->
+            <p class="fade-up" style="font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: #a89070; margin-bottom: 0.5rem;">
+              Nuestro Padrinos
+            </p>
+            <p style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #636C2E;">
+              Paco Quispe Berrocal
+            </p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: #9e8e7e; margin: 0.2rem 0;">
+              &
+            </p>
+            <p style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #636C2E;">
+              Celia Cerda Vasquez
+            </p>
+          </div>
+
+      </section>
+      <!-- FOOTER -->
+    <!-- <footer class="py-6 text-center">
+      <p
+        class="flex flex-wrap items-center justify-center gap-1 text-sm text-stone-600"
+      >
+        <span>Diseñado con</span>
+
+        <svg
+          class="h-4 w-4 fill-rose-500"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M12 21s-6.715-4.727-10-9c-1.986-2.523-.643-7 3-7 2.023 0 3.561 1.479 4 3 0.439-1.521 1.977-3 4-3 3.643 0 4.986 4.477 3 7-3.285 4.273-10 9-10 9z"
+          />
+        </svg>
+
+        <span>por</span>
+
+        <a
+          href="https://wa.me/51931293336?text=¡Hola! deseo más información sobre la creación de invitaciones digitales"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium text-amber-700 transition hover:text-amber-800 hover:underline"
+        >
+          Iterabyd
+        </a>
+      </p>
+    </footer> -->
+    </main>
+
+    
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
