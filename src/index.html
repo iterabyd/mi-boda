@@ -19,23 +19,19 @@
     <!-- PANTALLA DE INICIO -->
     <section
   id="welcome-screen"
-  class="fixed inset-0 z-50 bg-[#F8F5F2]"
->
+  class="fixed inset-0 z-50 bg-[#F8F5F2]">
   <div
     onclick="showInvitation()"
-    class="w-full h-full flex flex-col items-center justify-center"
-  >
+    class="w-full h-full flex flex-col items-center justify-center">
     <img
       src="assets/images/trajeta_olivo.png"
       alt="Invitación de Boda"
       class="object-contain"
-      style="width: 650px"
-    />
+      style="width: 650px"/>
 
     <p
       class="mt-4 text-center text-stone-700"
-      style="font-family:'Cormorant Garamond', serif;"
-    >
+      style="font-family:'Great Vibes', cursive;">
       Haz clic para ver la invitación
     </p>
   </div>
@@ -85,10 +81,35 @@
             Saul
           </p>
         </div>
+
+        <!-- ARREGLO SUPERPUESTO -->
+        <div class="absolute bottom-0 left-0 z-20 w-full">
+          <img
+            src="assets/images/arreglo3.png"
+            alt="Arreglo floral"
+            class="w-full h-auto"
+          />
+        </div>
+
+        <!-- ARREGLO IZQUIERDO -->
+        <div class="absolute bottom-0 left-0 z-20 pointer-events-none">
+          <img
+            src="assets/images/arreglo4.png"
+            alt="Arreglo floral"
+            class="w-32 md:w-48 lg:w-64 rotate-35 translate-x-[-50%] translate-y-[10%] opacity-90"/>
+        </div>
+
+        <!-- ARREGLO DERECHO -->
+        <div class="absolute bottom-0 right-0 z-20 pointer-events-none">
+          <img
+            src="assets/images/arreglo2.png"
+            alt="Arreglo floral"
+            class="w-32 md:w-48 lg:w-64 rotate-35 translate-x-[50%] translate-y-[10%] opacity-90"/>
+        </div>
       </section>
 
 
-      <!-- NOMBRES PADRES -->
+      <!-- NOMBRES PADRES y PADRINOS-->
 
       <section id="padres" class="fade-up w-screen py-2 px-6 flex flex-col items-center" style="background-color: #F8F5F2;">
 
@@ -105,7 +126,7 @@
         </p>
 
         <!-- Padres -->
-        <div class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-[800px]">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12 w-full max-w-200">
 
           <!-- Padres de la novia -->
           <div class="fade-up flex flex-col items-center text-center">
@@ -153,7 +174,7 @@
           <img
             src="assets/images/arreglo1.png"
             alt="Arreglo floral"
-            class="w-[480px] md:w-[340px] lg:w-[150px] h-auto"
+            class="w-120 md:w-85 lg:w-37.5 h-auto"
           />
         </div>
 
@@ -179,6 +200,53 @@
           </div>
 
       </section>
+      <!-- FOTO 2 -->
+
+      <section id="foto" class="relative w-screen overflow-hidden aspect-video" ">
+        <picture class="absolute inset-0 w-full h-full">
+          <!-- Laptop (1024px en adelante) -->
+          <source media="(min-width: 1024px)" srcset="assets/images/img1_laptop.png">
+          
+          <!-- Tablet (768px - 1023px) -->
+          <source media="(min-width: 768px)" srcset="assets/images/img1_tablet.png">
+          
+          <!-- Móvil (por defecto) -->
+          <img
+            src="assets/images/img1_laptop.png"
+            alt="Foto de la boda"
+            class="w-full h-full object-cover"
+            />
+        </picture>
+           
+        <!-- ARREGLO ARRIBA -->
+
+        <div class="absolute bottom-0 left-0 z-20 w-full">
+          <img
+            src="assets/images/arreglo5.png"
+            alt="Arreglo floral"
+            class="w-full h-auto"/>
+        </div>
+
+        <!-- ARREGLO ABAJO -->
+        <div class="absolute bottom-0 left-0 z-20 w-full">
+            <img
+              src="assets/images/arreglo3.png"
+              alt="Arreglo floral"
+              class="w-full h-auto"/>
+          </div>
+      </section>
+
+      <!-- CONTADOR -->
+
+      <section id="contador" class="fade-up w-screen py-2 px-6 flex flex-col items-center" style="background-color: #F8F5F2;">
+        <p style="font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: #a89070; margin-bottom: 0.5rem;">
+          Contamos con tu presencia el día
+        </p>
+        <p id="countdown" style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: #636C2E;">
+          00d 00h 00m 00s
+        </p>
+      </section>
+
       <!-- FOOTER -->
     <!-- <footer class="py-6 text-center">
       <p
