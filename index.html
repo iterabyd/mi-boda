@@ -18,24 +18,23 @@
 <body class="m-0 p-0 bg-[#F8F5F2] overflow-x-hidden">
     <!-- PANTALLA DE INICIO -->
     <section
-  id="welcome-screen"
-  class="fixed inset-0 z-50 bg-[#F8F5F2]">
-  <div
-    onclick="showInvitation()"
-    class="w-full h-full flex flex-col items-center justify-center">
-    <img
-      src="./assets/images/tarjeta_olivo.png"
-      alt="Invitación de Boda"
-      class="object-contain zoom-suave"
-      style="width: 650px"/>
+      id="welcome-screen"
+      class="fixed inset-0 z-50 bg-[#F8F5F2]">
+      <div
+        onclick="showInvitation()"
+        class="w-full h-full flex flex-col items-center justify-center">
+        <img
+          src="./assets/images/tarjeta_olivo.png"
+          alt="Invitación de Boda"
+          class="object-contain zoom-suave"
+          style="width: 650px"/>
 
-    <p
-      class="mt-4 text-center text-[#636C2E] "
-      style="font-family:'Great Vibes', cursive;">
-      Haz clic para ver la invitación
-    </p>
-  </div>
-</section>
+        <p
+          class="mt-2 text-center font-great-vibes text-2xl text-[#636C2E] ">
+          Haz clic para ver la invitación
+        </p>
+      </div>
+    </section>
     <!-- REPRODUCTOR DE MÚSICA -->
     <section id="music-player">
       <button id="music-btn" style="display:none; position:fixed; bottom:25px; right:25px; width:50px; height:50px; border-radius:50%; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.3); z-index:99999; cursor:pointer; align-items:center; justify-content:center;">
@@ -389,7 +388,67 @@
 
           </div>
 
-        </section>
+      </section>
+
+      <!-- PROGRAMA DE BODAS -->
+      <section class="py-4 px-6">
+
+        <div class="max-w-3xl mx-auto rounded-4xl border border-[#636C2E]/90 bg-[#636C2E/80] backdrop-blur-md shadow-xl p-8 md:p-12">
+          <h2 class="font-great-vibes text-5xl md:text-6xl text-[#636C2E] text-center mb-12">
+            Programa de Boda
+          </h2>
+
+          <div class="space-y-10">
+
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-cormorant text-3xl text-[#636C2E]">Ceremonia</h3>
+                <p class="font-playfair text-xl text-[#636C2E]/80">3:00 PM</p>
+              </div>
+              <img src="./assets/images/ceremonia.png" class="w-14 md:w-18 h-auto" alt="">
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-px h-10 bg-[#636C2E]/20"></div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <img src="./assets/images/recepcion.png" class="w-14 md:w-18 h-auto" alt="">
+              <div class="text-right">
+                <h3 class="font-cormorant text-3xl text-[#636C2E]">Recepción</h3>
+                <p class="font-playfair text-xl text-[#636C2E]/80">4:30 PM</p>
+              </div>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-px h-10 bg-[#636C2E]/20"></div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div>
+                <h3 class="font-cormorant text-3xl text-[#636C2E]">Cena</h3>
+                <p class="font-playfair text-xl text-[#636C2E]/80">6:30 PM</p>
+              </div>
+              <img src="./assets/images/cena.png" class="w-14 md:w-18 h-auto" alt="">
+            </div>
+
+            <div class="flex justify-center">
+              <div class="w-px h-10 bg-[#636C2E]/20"></div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <img src="./assets/images/fiesta.png" class="w-14 md:w-18 h-auto" alt="">
+              <div class="text-right">
+                <h3 class="font-cormorant text-3xl text-[#636C2E]">Fiesta</h3>
+                <p class="font-playfair text-xl text-[#636C2E]/80">9:00 PM</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
 
       <!-- FOOTER -->
       <footer class="py-8 text-center">

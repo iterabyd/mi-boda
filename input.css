@@ -163,3 +163,10 @@ body {
   }
 
 }
+.carousel-item {
+  cursor: pointer;
+}
+
+#carousel {
+  touch-action: pan-y;
+}

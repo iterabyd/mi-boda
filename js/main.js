@@ -172,3 +172,39 @@ setInterval(() => {
   updateCarousel();
 
 }, 3500);
+
+
+/* SWIPE PARA MÓVILES */
+
+let startX = 0;
+
+const carousel = document.getElementById("carousel");
+
+carousel.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+});
+
+carousel.addEventListener("touchend", (e) => {
+
+  const endX = e.changedTouches[0].clientX;
+  const distance = startX - endX;
+
+  if (distance > 50) {
+    nextSlide(); // deslizó a la izquierda
+  }
+
+  if (distance < -50) {
+    prevSlide(); // deslizó a la derecha
+  }
+
+});
+
+function nextSlide() {
+  current = (current + 1) % items.length;
+  updateCarousel();
+}
+
+function prevSlide() {
+  current = (current - 1 + items.length) % items.length;
+  updateCarousel();
+}
