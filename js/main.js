@@ -86,7 +86,7 @@ const observer = new IntersectionObserver(
     rootMargin: "0px 0px -50px 0px"
   }
 );
-document.querySelectorAll(".fade-up").forEach((el) => {
+document.querySelectorAll(".fade-up, .fade-image").forEach((el) => {
   observer.observe(el);
 });
 
