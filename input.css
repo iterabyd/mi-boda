@@ -11,6 +11,18 @@ body {
 body {
   overflow-x: hidden;
 }
+/* fonts */
+.font-cormorant {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-great-vibes {
+  font-family: 'Great Vibes', cursive;
+}
 
 /* Animaciones */
 .fade-up {
