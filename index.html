@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>María & José | Nuestra Boda</title>
 
-    <link rel="stylesheet" href="/dist/output.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
 
     <!-- Google Fonts -->
     <link
@@ -24,7 +24,7 @@
     onclick="showInvitation()"
     class="w-full h-full flex flex-col items-center justify-center">
     <img
-      src="assets/images/trajeta_olivo.png"
+      src="src/assets/images/invitacion.png"
       alt="Invitación de Boda"
       class="object-contain"
       style="width: 650px"/>
@@ -47,7 +47,7 @@
         </svg>
       </button>
       <audio id="music" loop>
-        <source src="assets/audio/musicafond.mp3" type="audio/mpeg" />
+        <source src="./assets/audio/musicafond.mp3" type="audio/mpeg" />
       </audio>
     </section>
 
@@ -57,14 +57,14 @@
       <section id="foto" class="relative w-screen overflow-hidden" style="height: 100dvh;">
         <picture class="absolute inset-0 w-full h-full">
           <!-- Laptop (1024px en adelante) -->
-          <source media="(min-width: 1024px)" srcset="assets/images/img1_laptop.png">
+          <source media="(min-width: 1024px)" srcset="./assets/images/img1_laptop.png">
           
           <!-- Tablet (768px - 1023px) -->
-          <source media="(min-width: 768px)" srcset="assets/images/img1_tablet.png">
+          <source media="(min-width: 768px)" srcset="./assets/images/img1_tablet.png">
           
           <!-- Móvil (por defecto) -->
           <img
-            src="assets/images/img1.png"
+            src="./assets/images/img1.png"
             alt="Foto de la boda"
             class="w-full h-full object-cover"
             />
@@ -85,7 +85,7 @@
         <!-- ARREGLO SUPERPUESTO -->
         <div class="absolute bottom-0 left-0 z-20 w-full">
           <img
-            src="assets/images/arreglo3.png"
+            src="./assets/images/arreglo3.png"
             alt="Arreglo floral"
             class="w-full h-auto"
           />
@@ -94,7 +94,7 @@
         <!-- ARREGLO IZQUIERDO -->
         <div class="absolute bottom-0 left-0 z-20 pointer-events-none">
           <img
-            src="assets/images/arreglo4.png"
+            src="./assets/images/arreglo4.png"
             alt="Arreglo floral"
             class="w-32 md:w-48 lg:w-64 rotate-35 translate-x-[-50%] translate-y-[10%] opacity-90"/>
         </div>
@@ -102,7 +102,7 @@
         <!-- ARREGLO DERECHO -->
         <div class="absolute bottom-0 right-0 z-20 pointer-events-none">
           <img
-            src="assets/images/arreglo2.png"
+            src="./assets/images/arreglo2.png"
             alt="Arreglo floral"
             class="w-32 md:w-48 lg:w-64 rotate-35 translate-x-[50%] translate-y-[10%] opacity-90"/>
         </div>
@@ -172,7 +172,7 @@
         <!-- Arreglo decorativo -->
         <div class="fade-up my-14 flex justify-center">
           <img
-            src="assets/images/arreglo1.png"
+            src="./assets/images/arreglo1.png"
             alt="Arreglo floral"
             class="w-120 md:w-85 lg:w-37.5 h-auto"
           />
@@ -205,14 +205,14 @@
       <section id="foto" class="relative w-screen overflow-hidden aspect-video" ">
         <picture class="absolute inset-0 w-full h-full">
           <!-- Laptop (1024px en adelante) -->
-          <source media="(min-width: 1024px)" srcset="assets/images/img1_laptop.png">
+          <source media="(min-width: 1024px)" srcset="./assets/images/img1_laptop.png">
           
           <!-- Tablet (768px - 1023px) -->
-          <source media="(min-width: 768px)" srcset="assets/images/img1_tablet.png">
+          <source media="(min-width: 768px)" srcset="./assets/images/img1_tablet.png">
           
           <!-- Móvil (por defecto) -->
           <img
-            src="assets/images/img1_laptop.png"
+            src="./assets/images/img1_laptop.png"
             alt="Foto de la boda"
             class="w-full h-full object-cover"
             />
@@ -222,7 +222,7 @@
 
         <div class="absolute bottom-0 left-0 z-20 w-full">
           <img
-            src="assets/images/arreglo5.png"
+            src="./assets/images/arreglo5.png"
             alt="Arreglo floral"
             class="w-full h-auto"/>
         </div>
@@ -230,7 +230,7 @@
         <!-- ARREGLO ABAJO -->
         <div class="absolute bottom-0 left-0 z-20 w-full">
             <img
-              src="assets/images/arreglo3.png"
+              src="./assets/images/arreglo3.png"
               alt="Arreglo floral"
               class="w-full h-auto"/>
           </div>
@@ -242,12 +242,12 @@
 
         <!-- 🌿 ARREGLOS ENCIMA (overlay superior global) -->
         <div class="absolute top-0 left-0 w-full z-20 pointer-events-none">
-          <img src="assets/images/arreglo7.png" class="w-full h-auto" alt="arreglo superior">
+          <img src="./assets/images/arreglo7.png" class="w-full h-auto" alt="arreglo superior">
         </div>
 
         <!-- 🌿 ARREGLOS ABAJO -->
         <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
-          <img src="assets/images/arreglo7.png" class="w-full h-auto" alt="arreglo inferior">
+          <img src="./assets/images/arreglo7.png" class="w-full h-auto" alt="arreglo inferior">
         </div>
 
         <!-- 💍 TARJETA CONTADOR -->
