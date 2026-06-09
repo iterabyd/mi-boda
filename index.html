@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>María & José | Nuestra Boda</title>
+    <title>Saul & Rosi | Nuestra Boda</title>
 
     <link rel="stylesheet" href="./dist/output.css" />
 
@@ -30,7 +30,7 @@
       style="width: 650px"/>
 
     <p
-      class="mt-4 text-center text-stone-700"
+      class="mt-4 text-center text-[#636C2E] "
       style="font-family:'Great Vibes', cursive;">
       Haz clic para ver la invitación
     </p>
@@ -71,14 +71,14 @@
         </picture>
         <!-- Nombres superpuestos -->
         <div style="position: absolute; top: 4rem; left: 0; width: 100%; z-index: 10; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 0.5rem;">
-          <p class="fade-up" style="font-family: 'Pinyon Script', cursive; font-size: 5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
-            Rosi
+          <p class="fade-up" style="font-family: 'Great Vibes', serif; font-size: 5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
+            Saul
           </p>
-          <p class="fade-up" style="font-family: 'Pinyon Script', cursive; font-size: 2.5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
+          <p class="fade-up" style="font-family: 'Cormorant Garamond', serif; font-size: 2.5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
             &amp;
           </p>
-          <p class="fade-up" style="font-family: 'Pinyon Script', cursive; font-size: 5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
-            Saul
+          <p class="fade-up" style="font-family: 'Great Vibes', serif; font-size: 5rem; color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); margin: 0; line-height: 1;">
+            Rosi
           </p>
         </div>
 
@@ -174,7 +174,7 @@
           <img
             src="./assets/images/arreglo1.png"
             alt="Arreglo floral"
-            class="w-120 md:w-85 lg:w-37.5 h-auto"
+            class="w-120 md:w-85 lg:w-80 h-auto"
           />
         </div>
 
@@ -185,8 +185,8 @@
           <div class="fade-up flex flex-col items-center text-center">
 
             <!-- Título -->
-            <p class="fade-up" style="font-family: 'Great Vibes', cursive; font-size: 1.5rem; color: #a89070; margin-bottom: 0.5rem;">
-              Nuestro Padrinos
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 0.75rem; letter-spacing: 0.3em; color: #a89070; text-transform: uppercase; margin-bottom: 0.75rem;">
+              Nuestros Padrinos
             </p>
             <p style="font-family: 'Great Vibes', cursive; font-size: 2.2rem; color: #636C2E;">
               Paco Quispe Berrocal
@@ -238,78 +238,203 @@
 
       <!-- CONTADOR -->
 
-      <section class="relative w-screen flex justify-center items-center py-16 overflow-hidden">
-
-        <!--ARREGLOS ENCIMA (overlay superior global) -->
-        <!-- <div class="absolute top-0 left-0 w-full z-40 pointer-events-none">
-          <img src="./assets/images/arreglo7.png" class="w-full h-auto" alt="arreglo superior">
-        </div>
-
-        
-        <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none">
-          <img src="./assets/images/arreglo7.png" class="w-full h-auto" alt="arreglo inferior">
-        </div> -->
+      <section class="relative w-screen flex justify-center items-center py-4 overflow-hidden " >
 
         <!-- TARJETA CONTADOR -->
-        <div class="relative z-30 px-8 py-10 text-center w-[90%] md:w-150">
+        <div class="relative z-30 px-8 py-4 text-center w-[90%] md:w-150 ">
 
-          <h2 class="font-great-vibes text-7xl italic text-[#636C2E] mb-8">
+          <h2 class="font-great-vibes text-6xl italic text-[#636C2E] mb-8">
             Faltan:
           </h2>
 
-          <div class="flex justify-center gap-4 md:gap-8 text-center">
+          <div class="flex justify-center items-center gap-2 md:gap-4 rounded-2xl border border-[#a89070] px-4 md:p-8 py-4">
 
-            <div>
-              <div id="days" class="font-playfair text-5xl md:text-7xl text-[#636C2E]"></div>
+            <div class="w-20 md:w-28 text-center">
+              <div id="days" class="font-playfair tabular-nums text-5xl md:text-7xl text-[#636C2E]">00</div>
               <span class="font-cormorant uppercase tracking-[0.15em] text-sm text-[#636C2E]">Días</span>
             </div>
-
-            <div>
+              
+              <div class="w-px h-16 bg-[#636C2E]/30 self-center"></div>
+            
+            <div class="w-20 md:w-28 text-center">
               <div id="hours" class="font-playfair text-5xl md:text-7xl text-[#636C2E]">00</div>
               <span class="font-cormorant uppercase tracking-[0.15em] text-sm text-[#636C2E]">Horas</span>
             </div>
 
-            <div>
+              <div class="w-px h-16 bg-[#636C2E]/30 self-center"></div>
+            
+            <div class="w-20 md:w-28 text-center">
               <div id="minutes" class="font-playfair text-5xl md:text-7xl text-[#636C2E]">00</div>
               <span class="font-cormorant uppercase tracking-[0.15em] text-sm text-[#636C2E]">Min</span>
             </div>
 
-            <div>
+            <div class="w-px h-16 bg-[#636C2E]/30 self-center"></div>
+            
+            <div class="w-20 md:w-28 text-center">
               <div id="seconds" class="font-playfair text-5xl md:text-7xl text-[#636C2E]">00</div>
               <span class="font-cormorant uppercase tracking-[0.15em] text-sm text-[#636C2E]">Seg</span>
             </div>
 
           </div>
-
         </div>
-
       </section>
 
+      <!-- FECHA DE MATRIMONIO -->
+       <section class="py-4 flex justify-center">
+        <div class="text-center text-[#636C2E]">
+
+          <!-- ARREGLO FLORAL -->
+          <div class="flex justify-center mb-8">
+            <img
+              src="./assets/images/arreglo8.png"
+              alt="Arreglo floral"
+              class="w-70 md:w-105 lg:w-130 h-auto"/>
+          </div>
+
+          <!-- SÁBADO -->
+          <div class="flex items-center justify-center gap-4 mb-4">
+            <div class="w-12 md:w-20 h-px bg-[#a89070]"></div>
+
+            <span
+              class="font-cormorant text-xl md:text-3xl tracking-[0.25em] uppercase">
+              Sábado
+            </span>
+
+            <div class="w-12 md:w-20 h-px bg-[#a89070]"></div>
+          </div>
+
+          <!-- DÍA -->
+          <div
+            class="font-playfair text-[6rem] md:text-[9rem] leading-none text-[#636C2E]">
+            01
+          </div>
+
+          <!-- AGOSTO -->
+          <div class="flex items-center justify-center gap-4 mt-4">
+            <div class="w-12 md:w-20 h-px bg-[#a89070]"></div>
+
+            <span
+              class="font-cormorant text-xl md:text-3xl tracking-[0.25em] uppercase">
+              Agosto
+            </span>
+
+            <div class="w-12 md:w-20 h-px bg-[#a89070]"></div>
+          </div>
+
+          <!-- AÑO -->
+          <div
+            class="mt-6 font-cormorant text-xl md:text-3xl tracking-[0.4em]">
+            2026
+          </div>
+
+          <!-- ARREGLO FLORAL INFERIOR -->
+          <div class="flex justify-center mt-8">
+            <img
+              src="./assets/images/arreglo8.png"
+              alt="Arreglo floral"
+              class="w-70 md:w-105 lg:w-130 h-auto rotate-180"/>
+          </div>
+
+        </div>
+      </section>
+      
+      <!-- NUESTRA HISTORIA -->
+      <section class="py-8 px-6 overflow-hidden">
+
+          <div class="max-w-6xl mx-auto text-center">
+
+            <!-- TITULO -->
+            <h2
+              class="font-great-vibes text-6xl italic text-[#636C2E] mb-8">
+              Nuestra Historia
+            </h2>
+
+            <!-- TEXTO -->
+            <p
+              class="font-cormorant text-xl md:text-2xl text-[#636C2E]/90 max-w-3xl mx-auto leading-relaxed mb-3">
+
+              "Cuando dos personas que ni soñaban conocerse terminan encontrándose
+              en el instante menos esperado, pero en el momento oportuno."
+
+            </p>
+
+            <!-- CARRUSEL -->
+            <div class="relative h-125 flex items-center justify-center ">
+
+              <div id="carousel" class="relative w-full h-full">
+
+                <img src="./assets/images/img1.png"
+                    class="carousel-item"
+                    alt="Foto 1">
+
+                <img src="./assets/images/img1_movil.png"
+                    class="carousel-item"
+                    alt="Foto 2">
+
+                <img src="./assets/images/img1.png"
+                    class="carousel-item"
+                    alt="Foto 3">
+
+                <img src="./assets/images/img1_movil.png"
+                    class="carousel-item"
+                    alt="Foto 4">
+
+                <img src="./assets/images/img1.png"
+                    class="carousel-item"
+                    alt="Foto 5">
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
       <!-- FOOTER -->
-    <footer class="py-6 text-center">
-      <p
-        class="flex flex-wrap items-center justify-center gap-1 text-sm text-stone-600">
-        <span>Diseñado con</span>
+      <footer class="py-8 text-center">
 
-        <svg
-          class="h-4 w-4 fill-green-500"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12 21s-6.715-4.727-10-9c-1.986-2.523-.643-7 3-7 2.023 0 3.561 1.479 4 3 0.439-1.521 1.977-3 4-3 3.643 0 4.986 4.477 3 7-3.285 4.273-10 9-10 9z"/>
-        </svg>
+        <p
+          class="flex flex-wrap items-center justify-center gap-2
+                font-cormorant
+                text-lg
+                text-[#636C2E]">
 
-        <span>por</span>
+          <span class="font-cormorant">Diseñado con</span>
 
-        <a
-          href="https://wa.me/51931293336?text=¡Hola! deseo más información sobre la creación de invitaciones digitales"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="font-medium text-green-700 transition hover:text-amber-800 hover:underline">
-          Iterabyd
-        </a>
-      </p>
-    </footer>
+          <svg
+            class="h-4 w-4 fill-[#636C2E]"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg">
+
+            <path
+              d="M12 21s-6.715-4.727-10-9c-1.986-2.523-.643-7 3-7
+                2.023 0 3.561 1.479 4 3
+                0.439-1.521 1.977-3 4-3
+                3.643 0 4.986 4.477 3 7
+                -3.285 4.273-10 9-10 9z"/>
+
+          </svg>
+
+          <span>por</span>
+
+          <a
+            href="https://wa.me/51931293336?text=¡Hola! deseo más información sobre la creación de invitaciones digitales"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-playfair
+                  text-[#b68655]
+                  transition-all
+                  duration-300
+                  hover:opacity-70">
+
+            Iterabyd
+
+          </a>
+
+        </p>
+
+      </footer>
     </main>
 
     

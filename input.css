@@ -75,3 +75,91 @@ body {
     transform: scale(1);
   }
 }
+
+/* SLIDE FOTOS */
+.carousel-item {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 320px;
+  height: 420px;
+
+  object-fit: cover;
+
+  border-radius: 2rem;
+
+  transform-style: preserve-3d;
+
+  transition: all 0.8s ease;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+
+  transform:
+    translate(-50%, -50%)
+    scale(.7);
+
+  opacity: 0;
+}
+
+/* FOTO CENTRAL */
+.carousel-item.active {
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+
+  opacity: 1;
+
+  z-index: 10;
+}
+
+/* FOTO IZQUIERDA */
+.carousel-item.prev {
+  transform:
+    translate(-140%, -50%)
+    scale(.8);
+
+  opacity: .6;
+
+  z-index: 5;
+}
+
+/* FOTO DERECHA */
+.carousel-item.next {
+  transform:
+    translate(40%, -50%)
+    scale(.8);
+
+  opacity: .6;
+
+  z-index: 5;
+}
+
+/* OCULTAS */
+.carousel-item.hidden {
+  opacity: 0;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+
+  .carousel-item {
+    width: 240px;
+    height: 320px;
+  }
+
+  .carousel-item.prev {
+    transform:
+      translate(-115%, -50%)
+      scale(.75);
+  }
+
+  .carousel-item.next {
+    transform:
+      translate(15%, -50%)
+      scale(.75);
+  }
+
+}
