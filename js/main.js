@@ -208,3 +208,14 @@ function prevSlide() {
   current = (current - 1 + items.length) % items.length;
   updateCarousel();
 }
+
+/* SCROLL AUTOMATICO AL INCIO */
+const btnTop = document.getElementById("btnTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    btnTop.classList.remove("hidden");
+  } else {
+    btnTop.classList.add("hidden");
+  }
+});

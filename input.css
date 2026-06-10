@@ -170,3 +170,67 @@ body {
 #carousel {
   touch-action: pan-y;
 }
+
+/* ANIMACION DE CIRCULO */
+.icon-circle{
+  position: relative;
+  width: 90px;
+  height: 90px;
+  min-width: 90px;
+  min-height: 90px;
+  border-radius: 9999px;
+  background: #636C2E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-circle::before{
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 9999px;
+  border: 2px solid #636C2E;
+  border-top-color: transparent;
+  animation: spinRing 6s linear infinite;
+}
+
+@keyframes spinRing{
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* sombra texto */
+
+.text-shadow-soft{
+  text-shadow: 0 2px 8px rgba(0,0,0,.45);
+}
+
+.text-shadow-medium{
+  text-shadow: 0 3px 12px rgba(0,0,0,.60);
+}
+
+.text-shadow-strong{
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 1);
+}
+
+/* SCROOL SUAVE AL INICIO */
+html {
+  scroll-behavior: smooth;
+}
+
+/* darle movimiento a la flecha */
+.arrow-up{
+  animation: goUp 2s ease-in-out infinite;
+}
+
+@keyframes goUp{
+  0%, 100%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-12px);
+  }
+}
